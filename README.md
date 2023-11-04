@@ -13,6 +13,6 @@ Here i include basic practice projects, that help beginner to practice javascrip
 # All this concepts i'm learning from @HiteshChoudhary Sir
 Here is the youtube link where you can learn and master in javascript
 
-[Part1:-](https://youtu.be/sscX432bMZo?si=lXmgIhjDKRwamY36)
+[Part1](https://youtu.be/sscX432bMZo?si=lXmgIhjDKRwamY36)
 
-[Part2:-](https://youtu.be/_TjtAyMkiTI?si=PcIzbZnrR2oFpxYs)
+[Part2](https://youtu.be/_TjtAyMkiTI?si=PcIzbZnrR2oFpxYs)
