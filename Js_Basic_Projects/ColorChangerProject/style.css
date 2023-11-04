@@ -1,0 +1,39 @@
+:root {
+    --black: #000000;
+    --white: #ffff;
+  }
+  
+  h1, h2 {
+    font-family: Lato;
+  }
+  
+  .main {
+    margin-top: 100px;
+    text-align: center;
+    
+  }
+  span {
+    display: block;
+  }
+  .button {
+    width:70px;
+    height:70px;
+    border: solid black 2px;
+    display: inline-block;
+  }
+  
+  #grey {
+    background-color: grey;
+  }
+  
+  #black {
+    background-color: #000000;
+  }
+  
+  #yellow {
+    background-color: yellow;
+  }
+  
+  #white {
+    background-color: white;
+  }

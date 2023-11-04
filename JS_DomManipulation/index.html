@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+    <style>
+        .bg-black {
+            background-color: black;
+            color: beige;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div class="main">
+        <h1 id="heading">Dom Manipulation <span style="display: none;">Javascript</span> Practice </h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores, itaque molestiae nam explicabo rem eveniet veritatis! Sed similique inventore quisquam dicta iste ipsum tempora omnis rerum voluptas aliquam. Pariatur, mollitia?</p>
+    </div>
+    <ul class="parent">
+        <li class="item">Javascript</li>
+    </ul>
+</body>
+<script>
+    //const parent=document.querySelector('.parent')
+    //console.log(parent);
+   // console.log(parent.children);
+    //const childrenArray=Array.from(parent.children)
+    //console.log(childrenArray);
+
+    // childrenArray.forEach((li)=>{
+    //    li.style.color='green'
+    //    li.style.backgroundColor='pink'
+    // })
+    //console.log(parent.firstElementChild)
+    //console.log(parent.lastElementChild);
+
+   // const child=document.querySelector('.item');
+    //console.log(child);
+    //This gives the parent element of the child
+    //console.log(child.parentElement);
+
+    //This gives the next sibling of the child
+    //console.log(child.nextElementSibling);
+    
+    //nextElementSibling gives the next Html element
+    //But nextSibling gives the next node of the parent element. here a next line space is added as a next node so it return #text node as next sibling
+    //console.log(child.nextSibling);
+
+    //How to check how many nodes are present in the parent element?
+  //  console.log(parent.childNodes);
+//It count line breaks also a node. so text is counted as node in the node list. text is here the line break btw any two elements. if you increase the line break then our text node is increased or not? answer is no. because dom counts only one line break if there is also more than one line break
+  //  NodeList(7) [text, li.item, text, li.item, text, li.item, text]
+
+  //how to create an element
+//   const h2=document.createElement('h2')
+//   console.log(h2);
+//   h2.className='subheading'
+//   h2.id='myid'
+//   const text=document.createTextNode("Adding an element into our Dom")
+//   h2.appendChild(text)
+
+//   //Now our element is created, next we have to append this into our dom
+//   document.getElementById('heading').appendChild(h2)
+//add a li with this existing li
+function addLi(lang) {
+    const li=document.createElement('li')
+    //li.innerHTML=`${lang}`
+    //This method is not optimized as to add a inner html it has to traverse the whole tree
+    li.appendChild(document.createTextNode(lang))
+    document.querySelector('ul').appendChild(li)
+}
+addLi("Java")
+addLi("Python")
+addLi("Python")
+
+//Edit an existing element
+//Edit Python with ruby
+const lastLang=document.querySelector('li:last-child')
+console.log(lastLang);
+//First way to change the inner html of the element
+//lastLang.innerHTML="Ruby"
+//Second way to add a html element
+//lastLang.outerHTML="<li>Spring Boot</li>"
+const newli=document.createElement('li')
+newli.appendChild(document.createTextNode("Ruby"))
+//Third way to replace the new element with existing one
+lastLang.replaceWith(newli);
+
+//remove
+const secondLang=document.querySelector('li:nth-child(2)')
+secondLang.remove();
+
+
+</script>
+</html>

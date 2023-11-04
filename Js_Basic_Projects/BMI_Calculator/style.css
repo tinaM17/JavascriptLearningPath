@@ -1,0 +1,82 @@
+.container {
+    text-align: center;
+}
+fieldset {
+    margin-bottom: 10px;
+    border-color: red;
+}
+legend {
+    color: blue;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5%;
+    background-color: green;
+    color: #fff;
+}
+button:hover {
+    padding: 15px;
+    font-size: medium;
+}
+.result {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    text-align: center;
+}
+
+span {
+    padding: 10px;
+}
+
+.form {
+    width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #aba0a079;
+    padding: 20px;
+}
+
+form {
+    align-items: center;
+}
+
+input {
+    padding: 5px;
+}
+
+.details {
+    display: flex;
+    justify-content: center;
+}
+
+table,td,th {
+    border: solid black 2px;
+    border-collapse: collapse;
+    margin: 40px;
+    padding-block: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+th {
+    background-color: rgb(172, 172, 172);
+}
+
+tr:nth-child(1){
+    background-color: rgba(255, 255, 0, 0.687);
+}
+
+tr:nth-child(2) {
+    background-color: rgb(5, 157, 5);
+}
+
+tr:nth-child(3) {
+    background-color: orange;
+}
+tr:last-child {
+    background-color: rgb(198, 47, 47);
+}
