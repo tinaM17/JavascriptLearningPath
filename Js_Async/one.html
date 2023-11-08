@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Javascript</title>
+</head>
+<body>
+    
+  <h1 id="heading">Javascript Course</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+     // console.log("I appeard immediately");
+      //  setTimeout(function(){
+      //   console.log("I have been appear 3 sec later");
+      //  },3000) 
+       // setTimeout() is async function it does not hold the execution of the call stack. From the call stack it goes to the Web Api which handles all the js async functions it then register the call back functions in a task queue after completing the specified time the call back function goes to the call stack and executes it's operation
+      // we can pass a function ref also as a callback/handler
+      // const showme= function(){
+      //   console.log("I have been appear 3 sec later");
+      // }
+
+      // setTimeout(showme,3000)
+
+      // Change the title after 3 seconds:- 
+      // const titleChange=setTimeout(()=>{
+      //   document.getElementById('heading').innerHTML="Best Javascript Course"
+      // },3000)
+
+      // clearTimeout() It stops the execution of the setTimeout() function. But for that we have to pass the ref of that setTimeout() which we want to stop executing
+    // document.querySelector('#stop').addEventListener('click',()=>{
+    //   console.log("Stop changing the title");
+    //   clearTimeout(titleChange)
+    // })
+    // This is how we can stop the execution of the setTimeout()
+    
+    //setInterval():- It executes the callback fn after a specific time interval continuously. It takes two or three arguments, first is a callback fn or a fn ref, 2nd is the time interval in seconds, third is optional we can provide the argument for the fn ref.
+
+    // setInterval(function(){
+    //    console.log("Hi,from set interval");
+    // },1000)
+    // setInterval(function(str){
+    //    console.log("Hi,from set interval "+str);
+    // },1000,"Tina")
+    //Output:- hi from set intereval Tina
+
+    //This is how we can pass the third argument in our setInterval() function
+    // How to stop the setInterval fn execution? Using clearInterval() it takes the ref of the setInterval fn which we have to stop from executing
+
+    // const greets=setInterval(function(str){
+    //    console.log("Hi,from set interval "+str);
+    // },1000,"Tina")
+
+    // clearInterval(greets)
+
+    // Challange:- 
+    //on clickimg on the start button the setIntervaln starts executing and onclicking on the stop button it stops the execution of the setInterval
+    // let greet;
+    // document.getElementById('start').addEventListener('click', (e)=>{
+    //   greet=setInterval(function(str){
+    //    console.log("Hi,from set interval "+str);
+    // },1000,"Tina")
+    // })
+
+    // document.getElementById('stop').addEventListener('click',(e)=>{
+    //     clearInterval(greet)
+    //     console.log("Stops the execution of the setInterval");
+    // })
+
+    //Challange completed
+    
+
+</script>
+</html>
