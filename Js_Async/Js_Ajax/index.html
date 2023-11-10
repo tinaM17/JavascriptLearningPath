@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Demo</title>
+    <style>
+        #card {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+        span {
+            position: absolute;
+            top: 220px;
+            left: 70px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ajax Demo</h1>
+    <h2>Click on the button to fetch my details</h2>
+    <button id="start">Start</button>
+    <div id="card">
+        <p id="name"></p>
+    </div>
+</body>
+
+<script>
+
+    const button=document.getElementById('start')
+    const card=document.getElementById('card')
+    const img=document.createElement('img')
+    const p=document.getElementById('name')
+    const url="https://api.github.com/users/tinaM17"
+
+
+    button.addEventListener('click',function(e){
+        card.style.backgroundColor='#212121'
+        const xhr=new XMLHttpRequest()
+        xhr.open('GET',url)
+        xhr.send()
+        xhr.onreadystatechange = function () {
+            const data=JSON.parse(this.responseText)
+            console.log(data.followers);
+            img.src=data.avatar_url
+            p.innerHTML= `<span>Name:- ${data.name}</span>`
+            console.log(p);
+            card.appendChild(img)
+
+        }
+
+    })
+</script>
+</html>
