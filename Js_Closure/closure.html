@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scope and Closures</title>
+</head>
+<body>
+    <button id="pink">Pink</button>
+    <button id="red">Red</button>
+</body>
+<script>
+   //Lexical Scope:-
+//    function outer(){
+//     let name="Tina"
+//     function inner(){
+//         console.log(name);
+//     }
+//     inner();
+//    }
+//    outer();
+   //Output: Tina
+   // What is lexical scope:- If a function has an inner function then the inner function has the rights to access the variables of the outer function.
+   //But the outer function has not any rights to access the variables of the inner function.
+   // This is called Lexical scoping
+
+   //Closures:- A closure is the combination of a function and the lexical environment 
+   //within which that function was declared. This environment consists of any local 
+   //variables that were in-scope at the time the closure was created
+   
+//    function outer(color) {
+//       function inner() {
+//         console.log(color);
+//       }
+//       return inner;
+//    }
+
+//    //console.log(outer('red'));
+//    // returns the inner function
+//    const colorFn=outer('red')
+//    colorFn();
+   //Output:- red
+
+   // So when we execute the outer() it returns not only the inner fn but also with it's lexical scope. else it does not print the color here because it is present in it's lexical scope. So, this is called closure.
+
+ //Practical implementation of closure:- 
+  document.getElementById('red').onclick = handleClick('red')
+  document.getElementById('pink').onclick = handleClick('pink')
+
+  function handleClick(color){
+    return function(){
+        document.body.style.backgroundColor=color;
+    }
+  }
+</script>
+</html>
