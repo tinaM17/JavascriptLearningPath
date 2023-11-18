@@ -59,7 +59,7 @@ Here are some examples to illustrate the differences:
 ```javascript
 var str = "Hello, World!";
 var resultSubstring = str.substring(0, 5); // "Hello"
-var resultSlice = str.slice(0, 5); // "Hello"
+var resultSlice = str.slice(0, 5); // "Hello "
 
 var resultSubstringNegative = str.substring(7, 2); // "Hello" (swaps indices)
 var resultSliceNegative = str.slice(7, 2); // "" (empty string)
