@@ -39,10 +39,10 @@
 // console.log(userDetails()); //{ username: 'Tina' }
 
 
-//*********** IIFF */
+//*********** IIFE */
 
-// Immediately Invoked Function Expression (IIFF)
-// It is run as soon as it is declared. When we don't want to reuse the code and the variables declare inside that then instead of creating a function we can create an IIFF which will avoid polluting the global namespace
+// Immediately Invoked Function Expression (IIFE)
+// It is run as soon as it is declared. When we don't want to reuse the code and the variables declare inside that then instead of creating a function we can create an IIFE which will avoid polluting the global namespace
 
 //Syntax:-
 
@@ -58,11 +58,11 @@
 //     console.log('App is running on port 8080');
 // })()
 
-// To run two IIFF in a single application we need to explicity end thec first IIFF else it gives an error. To end the first IIFF we place a semicolon end of the IIFF
+// To run two IIFF in a single application we need to explicity end the first IIFE else it gives an error. To end the first IIFE we place a semicolon end of the IIFE
 
-// Parameterized IIFF
+// Parameterized IIFE
 
 ((port)=>{
     console.log(`App is running on port ${port}`);
 })(5000)
-// by this we can passed parameter to our IIFF
+// by this we can passed parameter to our IIFE
