@@ -1,156 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Events Learning</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Events learning</h1>
     <div id="Programming_Languages">
-        <ul id="OOP_language"> 
-            <li id="java"><img src="https://freepngimg.com/thumb/java/5-2-java-png-clipart-thumb.png" alt="java"></li>
-             <li id="python"><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--wuGMN5ft--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/eiukxo19khgzipc97rq1.jpg" alt="Python"></li>
-            <li id="javascript"><img src="https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept-bright-vibrant-violet-isolated-illustration_335657-986.jpg" alt=""></li>
-            <li id="ruby"><img src="https://cdn4.vectorstock.com/i/1000x1000/02/53/ruby-programming-language-vector-23860253.jpg" alt=""></li>
-            <li id="google"><a id="link" href="https://www.google.com">Google</a></li>
-        </ul>
+      <ul id="OOP_language">
+        <li id="java">
+          <img
+            src="https://freepngimg.com/thumb/java/5-2-java-png-clipart-thumb.png"
+            alt="java"
+          />
+        </li>
+        <li id="python">
+          <img
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s--wuGMN5ft--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/eiukxo19khgzipc97rq1.jpg"
+            alt="Python"
+          />
+        </li>
+        <li id="javascript">
+          <img
+            src="https://img.freepik.com/free-vector/programmers-using-javascript-programming-language-computer-tiny-people-javascript-language-javascript-engine-js-web-development-concept-bright-vibrant-violet-isolated-illustration_335657-986.jpg"
+            alt=""
+          />
+        </li>
+        <li id="ruby">
+          <img
+            src="https://cdn4.vectorstock.com/i/1000x1000/02/53/ruby-programming-language-vector-23860253.jpg"
+            alt=""
+          />
+        </li>
+        <li id="google">
+          <a id="link" href="https://www.google.com">Google</a>
+        </li>
+      </ul>
     </div>
-</body>
+  </body>
 
-<script>
-//Types of event listener in js
+  <script>
+    //Types of event listener in js
 
-// 1. add onclick() on the html elements itself:- example
-//    <li class="python" onclick="alert('Python is not my favourite')">Python</li>
-// This is not a good approach when your codebase is very large
+    // 1. add onclick() on the html elements itself:- example
+    //    <li className="python" onclick="alert('Python is not my favourite')">Python</li>
+    // This is not a good approach when your codebase is very large
 
+    // 2. onclick method inside your javascript file
+    // document.getElementById('python').onclick = function (e) {
+    //     console.log(e);
+    //     alert('Python is not my favourite');
+    // }
+    //This approach works but it gives minimal features to our selected component
 
-// 2. onclick method inside your javascript file
-// document.getElementById('python').onclick = function (e) {
-//     console.log(e);
-//     alert('Python is not my favourite');
-// }
-//This approach works but it gives minimal features to our selected component
+    // 3. Better approach is add a addEventListener() to your selected elements
+    // document.getElementById('javascript').addEventListener('click',(e)=>{
+    //      console.log(e);
+    //      alert("I Love Javascript")
+    // })
+    // e gives us detailed information about the browser like width, height of the window, timestamp when click, and many more
+    // Important topic to learn from this event object:-
+    // document.getElementById('javascript').addEventListener('click',(e)=>{
+    //      //console.log(e.type); // it will return the type of the event:- "click"
+    //     // console.log(e.timeStamp); // it will return the timestamp of the click
+    //    // console.log(e.preventDefault()); //it will prevent the default beheviour of the current component
+    //     //console.log(e.target); // it will return the target element in which event listener is declared
+    //    // console.log(e.toElement); //Returns a reference to the object that the mouse pointer entered.
+    //    //console.log(e.srcElement);  //Returns the source element of the event
+    //    //console.log(e.currentTarget); //Returns the current target of the event
+    //   // console.log(e.clientX);  // It will return the X axis pixel value
+    //  // console.log(e.clientY);  // It will return the Y axis pixel value
+    //   //  console.log(e.screenX); //The screenX read-only property of the MouseEvent interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.
+    // //  console.log(e.screenY); //The screenY read-only property of the MouseEvent interface provides the vertical coordinate (offset) of the mouse pointer in global (screen) coordinates.
+    // //console.log(e.tiltX,e.tiltY);
+    // //The angle in degrees between the Y-Z plane of the pointer (stylus) and the screen. The range of values is -90 to 90, inclusive, where a positive value is a tilt to the right. For devices that do not support this property, the value is 0.
+    // //console.log(e.altKey,e.ctrlKey,e.shiftKey);
+    // //The KeyboardEvent.altKey,ctrlKey,shiftKey read-only property is a boolean value that indicates if the alt,ctrl,shift key was pressed (true) or not (false) when the event occurred.
 
-// 3. Better approach is add a addEventListener() to your selected elements
-// document.getElementById('javascript').addEventListener('click',(e)=>{
-//      console.log(e);
-//      alert("I Love Javascript")
-// })
-// e gives us detailed information about the browser like width, height of the window, timestamp when click, and many more
-// Important topic to learn from this event object:- 
-// document.getElementById('javascript').addEventListener('click',(e)=>{
-//      //console.log(e.type); // it will return the type of the event:- "click"
-//     // console.log(e.timeStamp); // it will return the timestamp of the click
-//    // console.log(e.preventDefault()); //it will prevent the default beheviour of the current component
-//     //console.log(e.target); // it will return the target element in which event listener is declared
-//    // console.log(e.toElement); //Returns a reference to the object that the mouse pointer entered.
-//    //console.log(e.srcElement);  //Returns the source element of the event
-//    //console.log(e.currentTarget); //Returns the current target of the event
-//   // console.log(e.clientX);  // It will return the X axis pixel value
-//  // console.log(e.clientY);  // It will return the Y axis pixel value
-//   //  console.log(e.screenX); //The screenX read-only property of the MouseEvent interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.
-// //  console.log(e.screenY); //The screenY read-only property of the MouseEvent interface provides the vertical coordinate (offset) of the mouse pointer in global (screen) coordinates.
-// //console.log(e.tiltX,e.tiltY);
-// //The angle in degrees between the Y-Z plane of the pointer (stylus) and the screen. The range of values is -90 to 90, inclusive, where a positive value is a tilt to the right. For devices that do not support this property, the value is 0.
-// //console.log(e.altKey,e.ctrlKey,e.shiftKey);  
-// //The KeyboardEvent.altKey,ctrlKey,shiftKey read-only property is a boolean value that indicates if the alt,ctrl,shift key was pressed (true) or not (false) when the event occurred.
+    // //console.log(e.keyCode);
+    // //The deprecated KeyboardEvent.keyCode read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
+    // alert("I Love Javascript")
+    // })
 
-// //console.log(e.keyCode);
-// //The deprecated KeyboardEvent.keyCode read-only property represents a system and implementation dependent numerical code identifying the unmodified value of the pressed key.
-// alert("I Love Javascript")
-// })
+    // 4. attachEvent():- it is used earlier when we have to run our code in internet Explorer
 
-// 4. attachEvent():- it is used earlier when we have to run our code in internet Explorer
+    // 5. jQuery => on() event listener. Earlier it is very famous for writing event listener. Now it is replaced by reactjs
 
-// 5. jQuery => on() event listener. Earlier it is very famous for writing event listener. Now it is replaced by reactjs
+    // Event Propagation:- Event propagation is the context of Event Bubbling and Event Capturing
+    // In the addEventListener method, there is a third parameter which is by default false that's why if we did not pass any parameter it takes false as an argument.
+    // when it is false it works as a Event Bubbling
+    //Event Bubbling:-
+    //Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor elements in the DOM tree until it gets to the root element.
+    //Example:-
+    // document.getElementById('Programming_Languages').addEventListener('click',(e)=>{
+    //     console.log("div is clicked");
+    // })
 
-// Event Propagation:- Event propagation is the context of Event Bubbling and Event Capturing
-// In the addEventListener method, there is a third parameter which is by default false that's why if we did not pass any parameter it takes false as an argument.
-// when it is false it works as a Event Bubbling
-//Event Bubbling:- 
-//Event Bubbling is a concept in the DOM (Document Object Model). It happens when an element receives an event, and that event bubbles up (or you can say is transmitted or propagated) to its parent and ancestor elements in the DOM tree until it gets to the root element.
-//Example:- 
-// document.getElementById('Programming_Languages').addEventListener('click',(e)=>{
-//     console.log("div is clicked");
-// })
+    // document.getElementById('javascript').addEventListener('click',(e)=>{
+    //    console.log("Javascript is clicked");
+    // })
 
-// document.getElementById('javascript').addEventListener('click',(e)=>{
-//    console.log("Javascript is clicked");
-// })
+    //In this scenario when we click on the javascript it will print :-
+    // Javascript is clicked
+    // div is clicked
+    //So event will bubbled up from childs to parent event this is called event bubbling
 
-//In this scenario when we click on the javascript it will print :- 
-// Javascript is clicked
-// div is clicked
-//So event will bubbled up from childs to parent event this is called event bubbling
+    //Event Capturing:-
+    //Event capturing occurs when a nested element gets clicked. The click event of its parent elements must be triggered before the click of the nested element. This phase trickles down from the top of the DOM tree to the target element.
 
-//Event Capturing:- 
-//Event capturing occurs when a nested element gets clicked. The click event of its parent elements must be triggered before the click of the nested element. This phase trickles down from the top of the DOM tree to the target element.  
+    // Event capturing can't happen until the third argument of addEventListener is set to the Boolean value of true as shown below (default value is false).
+    // document.getElementById('Programming_Languages').addEventListener('click',(e)=>{
+    //     console.log("div is clicked");
+    // },true)
 
-// Event capturing can't happen until the third argument of addEventListener is set to the Boolean value of true as shown below (default value is false).  
-// document.getElementById('Programming_Languages').addEventListener('click',(e)=>{
-//     console.log("div is clicked");
-// },true)
+    // document.getElementById('javascript').addEventListener('click',(e)=>{
+    //    console.log("Javascript is clicked");
+    // },true)
 
-// document.getElementById('javascript').addEventListener('click',(e)=>{
-//    console.log("Javascript is clicked");
-// },true)
+    //Output:-
+    // div is clicked
+    // Javascript is clicked
 
-//Output:- 
-// div is clicked
-// Javascript is clicked
+    // To prevent this bubbling or capturing event we have a method to stop it. e.stopPropagation();
+    // document.getElementById('Programming_Languages').addEventListener('click',(e)=>{
+    //    //e.stopPropagation();
+    //     console.log("div is clicked");
+    // })
 
-// To prevent this bubbling or capturing event we have a method to stop it. e.stopPropagation();
-// document.getElementById('Programming_Languages').addEventListener('click',(e)=>{
-//    //e.stopPropagation();
-//     console.log("div is clicked");
-// })
+    // document.getElementById('javascript').addEventListener('click',(e)=>{
+    //    e.stopPropagation();
+    //    console.log("Javascript is clicked");
+    // })
 
-// document.getElementById('javascript').addEventListener('click',(e)=>{
-//    e.stopPropagation();
-//    console.log("Javascript is clicked");
-// })
+    // It will not print the parent element console it only shows the current event
 
-// It will not print the parent element console it only shows the current event
+    // e.preventDefault():- It will prevent the default functionality of an element. Here if we click on a tag then it goes to the link, but we don't wants that. so by using e.preventDefault() we can achieve this.
 
-// e.preventDefault():- It will prevent the default functionality of an element. Here if we click on a tag then it goes to the link, but we don't wants that. so by using e.preventDefault() we can achieve this.
+    // document.querySelector('#google').addEventListener('click',(e)=>{
+    //     console.log(e.target.parentNode);
+    //     e.preventDefault();
+    // })
+    //By this we can prevent any default functionality of an elements
 
-// document.querySelector('#google').addEventListener('click',(e)=>{
-//     console.log(e.target.parentNode);
-//     e.preventDefault();
-// })
-//By this we can prevent any default functionality of an elements
+    // Goal:- Delete the images on click
 
-// Goal:- Delete the images on click
+    // Idea 1:- is to select one by one id's of the li and addEventListener on that image and add a click event to delete that image
+    // Disadvantages:- this approach is very time consuming when the number of images are very vast and also it increase the lines of code that we have to write
 
-// Idea 1:- is to select one by one id's of the li and addEventListener on that image and add a click event to delete that image
-// Disadvantages:- this approach is very time consuming when the number of images are very vast and also it increase the lines of code that we have to write
+    // Idea 2:- select their parent element first and add a eventListener on it
+    // document.getElementById('OOP_language').addEventListener('click',(e)=>{
+    //     console.log(e.target)
+    // here when we click on the image our e.target is the img tag, and when we remove it only img is deleted but li tag is still there
+    // so it also not a perfect solution
+    //     const removeEle=e.target
+    //     removeEle.remove()
+    // })
 
-// Idea 2:- select their parent element first and add a eventListener on it
-// document.getElementById('OOP_language').addEventListener('click',(e)=>{
-//     console.log(e.target)
-// here when we click on the image our e.target is the img tag, and when we remove it only img is deleted but li tag is still there
-// so it also not a perfect solution
-//     const removeEle=e.target
-//     removeEle.remove()
-// })
+    // document.getElementById('OOP_language').addEventListener('click',(e)=>{
+    //     // e.target.parentNode is the img tag's li. so when we click on the img, li tag is deleted
+    //     console.log(e.target.tagName)
+    //     //But in this code when we click on the li all the list has been deleted at a single time but we don't wanna do that.
+    //     // After clicking li's also only that li will be deleted not the ul
 
-// document.getElementById('OOP_language').addEventListener('click',(e)=>{
-//     // e.target.parentNode is the img tag's li. so when we click on the img, li tag is deleted
-//     console.log(e.target.tagName)
-//     //But in this code when we click on the li all the list has been deleted at a single time but we don't wanna do that.
-//     // After clicking li's also only that li will be deleted not the ul
+    //     if(e.target.tagName==="IMG"){
+    //         // Here we added a check that if only the tagname is img means it is a image then only delete it's parentNode li. Else if we click on the li itself then it nothing deletes at all
+    //         const removeEle=e.target.parentNode
+    //         removeEle.remove()
+    //     }
+    // })
 
-//     if(e.target.tagName==="IMG"){
-//         // Here we added a check that if only the tagname is img means it is a image then only delete it's parentNode li. Else if we click on the li itself then it nothing deletes at all
-//         const removeEle=e.target.parentNode
-//         removeEle.remove()
-//     }
-// })
-
-// We achieve our end goal
-
-
-</script>
+    // We achieve our end goal
+  </script>
 </html>

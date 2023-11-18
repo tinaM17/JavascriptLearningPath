@@ -9,12 +9,12 @@
 
 // Polymorphism: JavaScript allows objects to be used interchangeably through the concept of duck typing, where the suitability of an object for a particular purpose is determined by its properties and methods, rather than its explicit type.
 
-// So, while JavaScript might not follow the classical class-based OOP approach, it does provide tools and features that allow for the implementation of OOP principles.
+// So, while JavaScript might not follow the classical className-based OOP approach, it does provide tools and features that allow for the implementation of OOP principles.
 
 // Is Javascript has classes?
 
-//Yes, JavaScript has introduced the class syntax in ECMAScript 2015 (ES6) to make it easier to work with objects and inheritance in a way that's similar to traditional class-based object-oriented languages.
-// Classes in JavaScript are essentially syntactic sugar over the prototype-based inheritance model that JavaScript has always had. Under the hood, classes are still using prototypes and constructor functions. This syntax just provides a more familiar and clearer way to define objects and their relationships, making it easier for those familiar with class-based languages to work in JavaScript.
+//Yes, JavaScript has introduced the className syntax in ECMAScript 2015 (ES6) to make it easier to work with objects and inheritance in a way that's similar to traditional className-based object-oriented languages.
+// Classes in JavaScript are essentially syntactic sugar over the prototype-based inheritance model that JavaScript has always had. Under the hood, classes are still using prototypes and constructor functions. This syntax just provides a more familiar and clearer way to define objects and their relationships, making it easier for those familiar with className-based languages to work in JavaScript.
 
 // Object literal:- an object literal is a comma-separated list of name-value pairs inside of curly braces. means a single object
 

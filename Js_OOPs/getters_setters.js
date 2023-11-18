@@ -2,7 +2,7 @@
 
 //setters or set:- The get syntax binds an object property to a function that will be called when that property is looked up. It can also be used in classes.
 
-// class User {
+// className User {
 //     constructor(username,email){
 //       this.username=username
 //       this.email=email
@@ -21,7 +21,7 @@ TypeError: Cannot set property email of #<User> which has only a getter
     at new User (/Users/tinamajumder/Code/MernStack/practice/Js_Course/Js_OOPs/getters_setters.js:8:17)
  */
 
-  //   class User {
+  //   className User {
   //     constructor(username,email){
   //       this.username=username
   //       this.email=email
@@ -44,7 +44,7 @@ TypeError: Cannot set property email of #<User> which has only a getter
    * To set the email we have to change the field name in set email() method
    */
 
-//   class User {
+//   className User {
 //     constructor(username,email){
 //       this.username=username
 //       this.email=email
@@ -69,7 +69,7 @@ RangeError: Maximum call stack size exceeded
 similar happens in get method also so we have to change the fieldname in get method also
  */
 
-// class User {
+// className User {
 //   constructor(username,email){
 //     this.username=username
 //     this.email=email
@@ -87,7 +87,7 @@ similar happens in get method also so we have to change the fieldname in get met
 // console.log(user.email);
 // NoW it works fine
 
-// class User {
+// className User {
 //   constructor(){
 //   }
 
